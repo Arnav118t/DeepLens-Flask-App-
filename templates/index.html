@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Analyzer</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- Top Section -->
+        <section class="hero">
+            <h1>AI Image Analyzer</h1>
+            <p class="subtitle">
+                Upload an image and let the model predict what it contains
+            </p>
+        </section>
+
+        <!-- Upload Card -->
+        <section class="card">
+            <form action="/" method="post" enctype="multipart/form-data">
+                <label class="file-label">
+                    Select Image
+                    <input type="file" name="imagefile" accept="image/*" required>
+                </label>
+
+                <button type="submit" class="btn-primary">
+                    Analyze Image
+                </button>
+            </form>
+        </section>
+
+        <!-- Result Section -->
+        {% if prediction %}
+        <section class="result-card">
+            <h2>Model Prediction</h2>
+            <p class="prediction-text">{{ prediction }}</p>
+        </section>
+        {% endif %}
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 AI Image Analyzer</p>
+            <p>Developed by Arnav Singh | Built using Flask & Machine Learning</p>
+        </footer>
+
+    </div>
+</body>
+</html>
