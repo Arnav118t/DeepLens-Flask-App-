@@ -1,7 +1,7 @@
 # 
 
 
-![DeepLens Banner](https://github.com/user-attachments/assets/31ebacc6-f1a4-4b64-85a8-9a7ff8618b3d)
+
 
 ## 📖 Introduction
 **DeepLens** is a sophisticated Image Classification web application developed by **Arnav Singh**. Built with **Flask** and powered by **TensorFlow/Keras**, this app allows users to upload any image—ranging from common pets like cats and dogs to complex objects—and receive an instant AI-powered prediction. The interface is styled with **Tailwind CSS** to ensure a modern, responsive user experience.
